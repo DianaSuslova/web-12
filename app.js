@@ -3,7 +3,7 @@ let App = {
     return {
       fam :'',
       name:'',
-      students: []
+      students: [],
     };
   },
   methods: {
@@ -23,8 +23,9 @@ let App = {
         this.name = this.name.toLowerCase().slice(1);
         this.fam = w1.toUpperCase() + this.fam; 
         this.name = w2.toUpperCase() + this.name;
-        console.log(this.fam);
-        console.log(this.name);
+        this.students.push(`${this.fam} ${this.name}`);
+        this.fam="";
+        this.name="";
       }
     }
   }
