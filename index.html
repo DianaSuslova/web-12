@@ -7,25 +7,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/vue@next"></script>
-  <script src="app.js"></script>
   <title>Лаба12</title>
 </head>
 <body>
-  <div id="a">
+  <div id="app">
     <h1>Список студентов</h1>
     <p>Благодаря vue.js мы можем создавать динамические станицы.</p>
     <form @submit.prevent="Sabmit" id="form">
       <div class="form">
       <label for="fam">Фамилия</label>
-      <input type="text" id="fam" placeholder="Фамилия">
+      
+      
+      <input type="text" v-bind:value="fam" id="fam" v-on:input="famEnter" placeholder="Фамилия">
       </div>  
       <div class="form">
       <label for="name">Имя</label>
-      <input 
-        type="text" id="name" placeholder="Имя">
+      
+      
+      <input type="text" v-bind:value="name" id="name" v-on:input="nameEnter"placeholder="Имя">
       </div>
+        <h2>Количество знаков: {{name.length + fam.length}}</h2>
         <button class="btn">Добавить</button>
     </form>
   </div>
+  <script src="app.js"></script>
 </body>
 </html>

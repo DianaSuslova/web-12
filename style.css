@@ -12,7 +12,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   width: 100vw;
 }
 
-#a {
+#app {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,4 +33,9 @@ button {
   box-sizing: border-box;
   margin-left: 50%;
   transform: translate(-50%);
+}
+input {
+  color: black;
+  padding: 5px;
+  margin-left: 10px;
 }
