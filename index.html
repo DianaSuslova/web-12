@@ -29,11 +29,11 @@
         <h2>Количество знаков: {{name.length + fam.length}}</h2>
         <button class="btn">Добавить</button>
     </form>
-    <ul v-if=" students.length !== 0">
-      <li v-for="(student, idx) in students">
+    <ol v-if=" students.length !== 0">
+      <li v-for="student in students">
         {{student}}
       </li>
-    </ul>
+    </ol>
     <div v-if="students.length == 0">пусто!</div>
   </div>
   <script src="app.js"></script>
